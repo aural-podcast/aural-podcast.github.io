@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="gb18030">
+  <title>Aural</title>
+  <link rel="icon" type="image/ico" href="logos/icon.jpg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" type="text/css" href="live.css">
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:500,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Bungee|Bungee+Hairline|Bungee+Outline|Roboto&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://kit.fontawesome.com/6a8915fabb.js" crossorigin="anonymous"></script>
+
+  <script src="js/radioPlayer.js"></script>
+
+</head>
+<body>
+
+  <div class="site">
+
+
+    <div class="title" style="mix-blend-mode: difference;">
+      <a href="https://www.aural.eiei.page/live.html"><img src="logos/auralBlanco.png" sound="sonidos/hannah.mp3" alt="" width="100%" height="auto"></a>
+
+      <h2 sound="sonidos/hannah.mp3">La plataforma sonora experimental de la ETSAMMmmRrrrr. Zzzzz. Sh!!</h2>
+
+      <a href="https://www.instagram.com/aural_podcast/?hl=es" sound="sonidos/hannah.mp3" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
+      <a href="https://www.mixcloud.com/Aural_Podcast/" sound="sonidos/hannah.mp3" target="_blank"><i class="fab fa-mixcloud fa-2x"></i></a>
+      <br>
+      <br>
+      <div id="live"><div id="live1"></div><a id="live2" sound=" " href="https://www.aural.eiei.page/live.html">Live</a></div>
+      <a class="link2" href="http://aural.dpaetsam.com/archivo/" sound="sonidos/hannah.mp3">Archivo</a>
+      <br>
+      <a class="link2" href="http://aural.dpaetsam.com/descargas.html" sound="sonidos/hannah.mp3">Descargas</a>
+      <br>
+      <a class="link2" href="http://aural.dpaetsam.com/altText1.html" sound="sonidos/hannah.mp3">Alt Text</a>
+      <br>
+      <a sound="sonidos/hannah.mp3" href="https://www.aural.dpaetsam.com/maca5.html" class="link2">Evento  Radiof&oacute;nico MaCA 5</a>
+      <br>
+      <a sound="sonidos/hannah.mp3" href="https://www.aural.dpaetsam.com/dpalive.html" class="link2">DPA live 19</a>
+      <br>
+      <a sound="sonidos/hannah.mp3" href="https://www.aural.dpaetsam.com/opencall20.html" class="link2">OPEN CALL 20</a>
+      <br>
+
+      
+      <!--
+      -->
+
+    </div>
+
+
+    <div class="live" style="mix-blend-mode: difference;" min-height="400px">
+
+      <div id="player">
+        <img src="logos/live.png" sound="sonidos/hannah.mp3" alt="" width="100%" height="auto" >
+        <i class="fas fa-play-circle fa-5x" id="play" onclick="play()"></i>
+        <i class="fas fa-pause-circle fa-5x" id="pause" onclick="pause()"></i>
+      </div>
+
+      
+      <div id="volumeCONTROL">
+        <input type="range" id="volume" max="1" min="0" step="0.01" oninput="changevolume(this.value)" />
+        <i id="volumeUP" class="fas fa-volume-up" onclick="mute()"></i>
+        <i id="volumeDOWN" class="fas fa-volume-down" onclick="mute()"></i>
+        <i id="volumeMUTE" class="fas fa-volume-mute" onclick="volumeup()"></i>
+      </div>
+
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfvrOk1YaAMrqhuHy6WDVLLxNUn2D2wN6lKZ0S2goCpoCheuw/viewform?embedded=true" width="100%" height="40%" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
+
+      
+
+      <!--
+      <iframe src="https://player.twitch.tv/?channel=n01seglobal&parent=www.example.com" frameborder="0" allowfullscreen="true" scrolling="no" height="60%" width="100%" ></iframe>
+       -->
+
+    </div>
+
+
+    <div class="chat" >
+        
+       <script id="cid0020000263685131487" data-cfasync="false" async src="//st.chatango.com/js/gz/emb.js" style="width: 100%; height: 60%;">{"handle":"aurallive","arch":"js","styles":{"b":100,"c":"000000","d":"000000","l":"FFFFFF","m":"FFFFFF","p":"10","r":100,"t":0,"usricon":1.3,"surl":0,"allowpm":0,"fwtickm":1}}</script>
+
+      <!--
+
+      -->
+    </div>
+
+
+    <div class="schedule" style="mix-blend-mode: difference;">
+
+      <img id="picture" src="http://aural.dpaetsam.com/nube/index.php/s/z74XuOidSjcZlCg/download?path=%2F&files=hell.gif" onerror="myFunction()" style='height: 100%; width: 100%; object-fit: contain; max-height: 100%;' sound="sonidos/hannah.mp3">
+
+      <iframe id="calendar" src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=2&amp;bgcolor=%23ffffff&amp;ctz=Europe%2FMadrid&amp;src=a2QwZW9sdjhrMmpiajlicnVhOTY0dXNzbDhAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;color=%23000000&amp;showTz=0&amp;showCalendars=0&amp;showTabs=0&amp;showPrint=0&amp;showDate=0&amp;showTitle=0&amp;mode=WEEK" style="border-width:0; -webkit-filter: grayscale(100%); filter: grayscale(100%) invert(100%) contrast(120%)" width="100%" height="100%" frameborder="0" scrolling="no"></iframe>
+
+      <!--
+
+      -->
+    </div>
+
+
+    <div class="link" style="mix-blend-mode: difference;">
+
+      <a href="https://maca.aq.upm.es/"><img src="logos/macaBlanco.png" sound="sonidos/aural.mp3" width="31%" height="auto"></a>
+      <a href="http://raca.aq.upm.es/"><img src="logos/racaBlanco.png" sound="sonidos/aural.mp3" width="64%" height="auto"></a>
+
+      <!--
+
+      -->
+    </div>
+
+  </div>
+
+<audio id="audio" controls src="https://node-17.zeno.fm/72f180hppd0uv?rj-ttl=5&amp;rj-tok=AAABdSf4ZkEAxwHOtml7y8peVw" ></audio>
+
+      <!--
+
+      -->
+</body>
+
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src='js/draggableDiv.js'> </script>
+<script type="text/javascript" src='js/picture.js'> </script>
+
+
+</html>

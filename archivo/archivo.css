@@ -1,0 +1,280 @@
+html{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+  }
+  
+  body{
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    height: 100%;
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    margin: 0;
+  }
+  
+  .site{
+    display: grid;
+    grid-template-columns: 0.7fr 0.7fr 1fr 0.7fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+      "title live chat schedule"
+      "link live chat schedule"
+      "link live chat schedule"
+      "link live chat schedule"
+      ;
+  
+      margin:0;
+      height: 100%;
+      position: relative;
+  }
+  
+  .title, .live, .link {
+    padding: 20px;
+  }
+  
+  .title{
+    grid-area: title;
+  }
+  
+  .live{
+    grid-area: live;
+    overflow-x: hidden; 
+    overflow-x: auto;
+    padding-bottom: 50px;
+  }
+  
+  .chat{
+    grid-area: chat;
+    position: relative;
+  }
+  
+  .schedule{
+    grid-area: schedule;
+    overflow-x: hidden; 
+    overflow-x: auto;
+    font-size: 0;
+    padding-bottom: 50px;
+  }
+  
+  .link{
+    grid-area: link;
+    display: inline;
+    align-self: flex-end;    
+    padding-bottom: 50px;
+  }
+
+  .player{
+    width: 100%;
+    filter:invert(100%) contrast(110%);
+    position: fixed;
+    left: 0;
+    bottom: 0;
+  }
+
+  h1, h2, p, img, a{
+    transition: all 0.3s ease-out;
+  }
+  
+  h6 {
+    margin: 0;
+  }
+
+  h1, h2{
+    font-family: 'Raleway', sans-serif;
+  }
+  
+  p{
+    font-size: 18px;
+  }
+  
+  a{
+    font-family: 'Raleway', sans-serif;
+    color: white;
+    text-decoration: none;
+  }
+
+  .caratulas{
+    display: inline-block;
+    width: 50%;
+    position: relative;
+  }
+
+  .caratula{
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+    border-width: 0px;
+    border-style: solid;
+    border-color: rgb(255, 255, 255);
+  }
+
+  .centro {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    font-size: 12px;
+    margin: 0;
+    padding: 7px 15px;
+    background-color: rgba(0, 0, 0, 0.445);
+    border-width: 0px;
+    border-style: solid;
+    border-color: rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+    width: 100%;
+  }
+
+  .caratulas .centro {
+    
+    
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;   
+  }
+
+  #principal{
+    width: 100%;
+    height: auto;
+  }
+
+  #mixcloud{
+    border-style: solid;
+    border-color: rgb(255, 255, 255);
+    border-width: 1px;
+  }
+
+
+  /* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #000000; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+#live1 {
+  width: 13px;
+  height: 13px;
+  -webkit-animation-name: live1; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+  -webkit-animation-iteration-count: infinite; /* Safari 4.0 - 8.0 */
+  animation-name: live1;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  border-radius: 50px;
+  display: inline-block;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes live1 {
+  0%   {background-color:white;}
+  50%  {background-color:red;}
+  100% {background-color:white;}
+}
+
+/* Standard syntax */
+@keyframes live1 {
+  0%   {background-color:white;}
+  50%  {background-color:red;}
+  100% {background-color:white;}
+}
+
+#live2 {
+  -webkit-animation-name: live2; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+  -webkit-animation-iteration-count: infinite; /* Safari 4.0 - 8.0 */
+  animation-name: live2;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  display: inline;
+  text-decoration: none;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes live2 {
+  0%   {color:white;}
+  50%  {color:red;}
+  100% {color:white;}
+}
+
+/* Standard syntax */
+@keyframes live2 {
+  0%   {color:white;}
+  50%  {color:red;}
+  100% {color:white;}
+}
+  
+  @media only screen and (max-width:1200px) {
+    /* For tablets: */
+  
+    .site{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: fit-content(100%);
+      grid-template-areas:
+        "title title live live"
+        "chat schedule live live"
+        "chat schedule link link"
+        ;
+      }
+
+      
+
+      .chat{
+        height: 300px;
+      }
+
+      .schedule{
+        height: 300px;
+      }
+
+  
+    }
+  
+    @media only screen and (max-width:900px) {
+      /* For tablets: */
+  
+      .site{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: fit-content(100%);
+        grid-template-areas:
+          "title"
+          "live"
+          "chat"
+          "schedule"
+          "link"
+          ;
+
+        }
+
+
+        .live{
+          height: max-content;
+          position: sticky;
+          top: 0;
+        }
+
+        .chat{
+          height: 300px;
+        }
+
+        .schedule{
+          height: 300px;
+        }
+  
+      }
+  

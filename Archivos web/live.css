@@ -1,0 +1,308 @@
+html{
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+body{
+  background-color: black;
+  color: white;
+  height: 100%;
+  width: 100%;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  margin: 0;
+}
+
+.site{
+  display: grid;
+  grid-template-columns: 0.8fr 0.8fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 0.4fr;
+  grid-template-areas:
+    "title live chat schedule"
+    "title live chat schedule"
+    "title live chat schedule"
+    "title live chat link"
+    ;
+
+    margin:0;
+    height: 100%;
+    position: relative;
+}
+
+.title, .live, .schedule, .link {
+  padding: 20px;
+}
+
+.title{
+  grid-area: title;
+}
+
+.live{
+  grid-area: live;
+}
+
+.chat{
+  grid-area: chat;
+  position: relative;
+  padding: 20px 8% ;
+}
+
+.schedule{
+  grid-area: schedule;
+}
+
+.link{
+  grid-area: link;
+  display: inline-block;
+  align-self: flex-end;
+}
+
+.pizarra{
+   position: absolute;
+   right: 4%;
+   bottom: 0;
+   min-width: 92%;
+   min-height: 100%;
+   z-index: -100;
+}
+
+#calendar{
+  display: none;
+}
+
+h1, h2, p, img, a{
+  transition: all 0.3s ease-out;
+}
+
+h6 {
+  margin: 0;
+}
+
+
+
+#audio{
+  width: 100%;
+  filter:invert(100%) contrast(110%);
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  mix-blend-mode: difference;
+}
+
+#player{
+  position: relative
+}
+
+#play{
+  display: block;
+  opacity: 50%;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+
+#pause{
+  display: none;
+  opacity: 50%;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer; 
+}
+
+#volumeCONTROL{
+  display: block;
+  position: relative;
+  padding: 5%;
+  width: 100%;
+}
+
+#volumeUP{
+  display: inline;
+  margin: 0 2%;
+  cursor: pointer; 
+}
+
+#volumeDOWN{
+  display: none;
+  margin: 0 2%;
+  cursor: pointer; 
+}
+
+#volumeMUTE{
+  display: none;
+  margin: 0 2%;
+  cursor: pointer; 
+}
+
+#volume{
+  width: 80%;
+  cursor: pointer; 
+}
+
+#mydiv {
+  position: absolute;
+  top: 30%;
+  left: 30%;
+  width: 200px;
+  height: auto;
+  z-index: 9;
+  background-color: black;
+  border: 1px solid white;
+  padding: 10px;
+  display: none;
+}
+
+#mydivheader {
+  cursor: move;
+  z-index: 10;
+  background-color: white;
+  color: black;
+  margin: -35px -10px -10px -10px;
+  text-align: right;
+}
+
+h1, h2{
+  font-family: 'Raleway', sans-serif;
+}
+
+p{
+  font-size: 18px;
+}
+
+a{
+  font-family: 'Raleway', sans-serif;
+  color: white;
+  text-decoration: none;
+}
+
+
+#close{
+  color: black;
+}
+
+.info{
+  margin: 0;
+}
+
+#live1 {
+  width: 13px;
+  height: 13px;
+  -webkit-animation-name: live1; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+  -webkit-animation-iteration-count: infinite; /* Safari 4.0 - 8.0 */
+  animation-name: live1;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  border-radius: 50px;
+  display: inline-block;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes live1 {
+  0%   {background-color:white;}
+  50%  {background-color:red;}
+  100% {background-color:white;}
+}
+
+/* Standard syntax */
+@keyframes live1 {
+  0%   {background-color:white;}
+  50%  {background-color:red;}
+  100% {background-color:white;}
+}
+
+#live2 {
+  width: 10px;
+  height: 10px;
+  -webkit-animation-name: live2; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+  -webkit-animation-iteration-count: infinite; /* Safari 4.0 - 8.0 */
+  animation-name: live2;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  display: inline;
+  text-decoration: none;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes live2 {
+  0%   {color:white;}
+  50%  {color:red;}
+  100% {color:white;}
+}
+
+/* Standard syntax */
+@keyframes live2 {
+  0%   {color:white;}
+  50%  {color:red;}
+  100% {color:white;}
+}
+
+
+
+@media only screen and (max-width:1200px) {
+  /* For tablets: */
+
+  .site{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: fit-content(100%);
+    grid-template-areas:
+      "title chat"
+      "live chat"
+      "schedule link"
+      ;
+    }
+
+    .pizarra{
+       height: 100%;
+    }
+
+    .schedule{
+        height: 100%;
+    }
+
+    #audio{
+      padding-bottom: 50px;
+    }
+
+  }
+
+  @media only screen and (max-width:900px) {
+    /* For tablets: */
+
+    .site{
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: fit-content(100%);
+      grid-template-areas:
+        "title"
+        "live"
+        "chat"
+        "schedule"
+        "link"
+        ;
+      }
+
+      .chat{
+        height: 0;
+      }
+      
+      #calendar{
+        height: 400px;
+      }
+
+    .schedule{
+        height: 100%;
+    }
+
+    }
